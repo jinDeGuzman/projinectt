@@ -59,4 +59,13 @@ public class Dragon
         else
             this.dragType = "Are you dumb";
     }
+
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "dragType='" + dragType + '\'' +
+                ", dragPower=" + dragPower +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
