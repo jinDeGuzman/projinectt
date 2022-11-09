@@ -2,19 +2,28 @@ public class Dragon
 {
     public String dragType;
     public int dragPower;
+    public String name;
+
     public Dragon(String dragType)
     {
-        this.dragType = dragType;
+        setDragType(dragType);
+        setDragPower(dragPower);
+        setName(name);
     }
 
-    public Dragon(int dragPower)
-    {
-        this.dragPower = 0;
-    }
     public Dragon()
     {
         dragType ="";
         dragPower = 0;
+        name = "";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDragPower() {return dragPower;
@@ -41,5 +50,5 @@ public class Dragon
         }
         else
             this.dragType = "Are you dumb";
-    }//3 digits - 2 - 4
+    }
 }

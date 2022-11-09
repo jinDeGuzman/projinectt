@@ -105,4 +105,11 @@ class DragonTest
         jin.setDragPower(-1);
         assertTrue(jin.getDragPower()==-10);
     }
+    @Test
+    void namePass()
+    {
+        Dragon jin = new Dragon();
+        jin.setName("Jin");
+        assertTrue(jin.getName().matches("Jin"));
+    }
 }
