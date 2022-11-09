@@ -90,4 +90,19 @@ class DragonTest
         jin.setDragPower(8);
         assertTrue(jin.getDragPower()==8);
     }
+
+    @Test
+    void dragPowerFailGreaterThan10()
+    {
+        Dragon jin = new Dragon();
+        jin.setDragPower(11);
+        assertTrue(jin.getDragPower()==-10);
+    }
+    @Test
+    void dragPowerFailLessThan0()
+    {
+        Dragon jin = new Dragon();
+        jin.setDragPower(-1);
+        assertTrue(jin.getDragPower()==-10);
+    }
 }

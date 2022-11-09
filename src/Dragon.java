@@ -21,16 +21,18 @@ public class Dragon
     }
 
     public void setDragPower(int dragPower) {
-        this.dragPower = dragPower;
+        if(dragPower <= 10 && dragPower >= 0)
+        {
+            this.dragPower = dragPower;
+        }
+        else
+            this.dragPower= -10;
     }
 
     public String getDragType() {
         return dragType;
     }
 
-    //public void setDragType(String dragType) {
-    //    this.dragType = dragType;
-    //}
     public void setDragType(String dragType)
     {
         if(dragType.matches("[A-Z][a-z]*_[0-9]"))
