@@ -4,7 +4,7 @@ public class Dragon
     public int dragPower;
     public String name;
 
-    public Dragon(String dragType)
+    public Dragon(String name, int dragPower, String dragType)
     {
         setDragType(dragType);
         setDragPower(dragPower);
@@ -13,20 +13,28 @@ public class Dragon
 
     public Dragon()
     {
-        dragType ="";
+        dragType =" ";
         dragPower = 0;
-        name = "";
+        name = " ";
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.matches("[A-Z][a-z]*"))
+        {
+            this.name = name;
+        }
+        else
+            this.name = "Are you dumb";
     }
 
-    public int getDragPower() {return dragPower;
+    public int getDragPower()
+    {
+        return dragPower;
     }
 
     public void setDragPower(int dragPower) {

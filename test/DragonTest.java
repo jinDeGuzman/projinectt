@@ -5,21 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class DragonTest
 {
     @Test
-    void typeDragPass()
-    {
-        Dragon jin = new Dragon("Red_1");
-        assertTrue(jin.getDragType().matches("Red_1"));
-    }
-
-    @Test
-    void typeDragSetterPass()
-    {
-        Dragon jin = new Dragon("Red_1");
-        jin.setDragType("Blue_1");
-        assertTrue(jin.getDragType().matches("Blue_1"));
-    }
-
-    @Test
     void typeDragRegexPass()
     {
         Dragon jin = new Dragon();
@@ -111,5 +96,34 @@ class DragonTest
         Dragon jin = new Dragon();
         jin.setName("Jin");
         assertTrue(jin.getName().matches("Jin"));
+    }
+    @Test
+    void nameRegexWorks()
+    {
+        Dragon jin = new Dragon();
+        jin.setName("Jin");
+        assertTrue(jin.getName().matches("Jin"));
+    }
+    @Test
+    void nameRegexFailsNoCaps()
+    {
+        Dragon jin = new Dragon();
+        jin.setName("jin");
+        assertTrue(jin.getName().matches("Are you dumb"));
+    }
+    @Test
+    void nameRegexFailsCapsAfterFIrst()
+    {
+        Dragon jin = new Dragon();
+        jin.setName("JIN");
+        assertTrue(jin.getName().matches("Are you dumb"));
+    }
+
+    @Test
+    void nameRegexFailsNonAlphabet()
+    {
+        Dragon jin = new Dragon();
+        jin.setName("J2n");
+        assertTrue(jin.getName().matches("Are you dumb"));
     }
 }
