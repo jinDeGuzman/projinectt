@@ -112,7 +112,7 @@ class DragonTest
         assertTrue(jin.getName().matches("Are you dumb"));
     }
     @Test
-    void nameRegexFailsCapsAfterFIrst()
+    void nameRegexFailsCapsAfterFirst()
     {
         Dragon jin = new Dragon();
         jin.setName("JIN");

@@ -63,9 +63,9 @@ public class Dragon
     @Override
     public String toString() {
         return "Dragon{" +
-                "dragType='" + dragType + '\'' +
-                ", dragPower=" + dragPower +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", Power=" + dragPower +
+                ", Type='" + dragType + '\'' +
                 '}';
     }
 }
