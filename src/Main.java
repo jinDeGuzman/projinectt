@@ -6,7 +6,7 @@ public class Main
     {
         //variables and scanner
         Scanner scan = new Scanner(System.in);
-        String p1Name = "";
+        String p1Name;
         String p2Name;
         String p1Type;
         String p2Type;
@@ -40,14 +40,11 @@ public class Main
         p2Power = scan.nextInt();
         p2.setDragPower(p2Power);
 
-        //Dragon p1 = new Dragon(p1Name, p1Power, p1Type);
-        //Dragon p2 = new Dragon(p2Name, p2Power, p2Type);
-
         System.out.println("\n");
         System.out.println("Player One Stats");
-        System.out.println(p1.toString());
+        System.out.println(p1);
         System.out.println("Player Two Stats");
-        System.out.println(p2.toString());
+        System.out.println(p2);
 
         //logic
         System.out.println("\n");
