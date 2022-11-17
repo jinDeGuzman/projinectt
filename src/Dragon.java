@@ -29,7 +29,7 @@ public class Dragon
             this.name = name;
         }
         else
-            this.name = "Are you dumb";
+            this.name = "Do you not know how to type a name";
     }
 
     public int getDragPower()

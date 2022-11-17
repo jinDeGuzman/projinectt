@@ -109,14 +109,14 @@ class DragonTest
     {
         Dragon jin = new Dragon();
         jin.setName("jin");
-        assertTrue(jin.getName().matches("Are you dumb"));
+        assertTrue(jin.getName().matches("Do you not know how to type a name"));
     }
     @Test
     void nameRegexFailsCapsAfterFirst()
     {
         Dragon jin = new Dragon();
         jin.setName("JIN");
-        assertTrue(jin.getName().matches("Are you dumb"));
+        assertTrue(jin.getName().matches("Do you not know how to type a name"));
     }
 
     @Test
@@ -124,6 +124,6 @@ class DragonTest
     {
         Dragon jin = new Dragon();
         jin.setName("J2n");
-        assertTrue(jin.getName().matches("Are you dumb"));
+        assertTrue(jin.getName().matches("Do you not know how to type a name"));
     }
 }
